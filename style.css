@@ -75,7 +75,17 @@ canvas {
   line-height: 1.5;
 }
 
-button {
+.panel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   border-radius: 12px;
   padding: 12px 20px;
@@ -86,11 +96,18 @@ button {
   color: #2a2000;
   box-shadow: 0 5px 0 #d89200;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  line-height: 1.2;
 }
 
-button:active {
+.action-btn:active,
+.action-btn:hover {
   transform: translateY(4px);
   box-shadow: 0 1px 0 #d89200;
+}
+
+.action-link {
+  width: 100%;
 }
 
 .controls {
