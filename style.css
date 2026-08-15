@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --panel: rgba(255, 255, 255, 0.94);
+  --text: #16324f;
+  --accent: #ffb703;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    linear-gradient(to bottom, #8ed6ff 0%, #c7efff 55%, #eafcff 100%);
+  color: var(--text);
+}
+
+.game-shell {
+  width: min(94vw, 470px);
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 12px;
+  font-size: clamp(1.6rem, 5vw, 2.3rem);
+}
+
+.game-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+  background: #76d7ff;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.panel {
+  width: min(88%, 320px);
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.panel h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.panel p {
+  line-height: 1.5;
+}
+
+.panel-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #2a2000;
+  box-shadow: 0 5px 0 #d89200;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.action-btn:active,
+.action-btn:hover {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #d89200;
+}
+
+.action-link {
+  width: 100%;
+}
+
+.controls {
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.sound-controls {
+  margin: 12px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sound-btn {
+  border: 2px solid var(--text);
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.sound-btn:hover {
+  background: var(--accent);
+  transform: scale(1.05);
+}
+
+.sound-btn:active {
+  transform: scale(0.95);
+}

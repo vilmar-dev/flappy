@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flappy Bird Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <h1>Flappy Bird Clone</h1>
+
+    <div class="sound-controls">
+      <button id="soundToggle" class="sound-btn" title="Toggle sound on/off">🔊 Sound ON</button>
+    </div>
+
+    <div class="game-wrap">
+      <canvas id="gameCanvas" width="420" height="640" aria-label="Flappy Bird game"></canvas>
+
+      <div id="startScreen" class="overlay">
+        <div class="panel">
+          <h2>Flappy Bird</h2>
+          <p>Press <strong>Space</strong>, click, or tap to flap.</p>
+          <button id="startBtn" class="action-btn">Start Game</button>
+        </div>
+      </div>
+
+      <div id="gameOverScreen" class="overlay hidden">
+        <div class="panel">
+          <h2>Game Over</h2>
+          <p>Score: <strong id="finalScore">0</strong></p>
+          <p>Best: <strong id="bestScore">0</strong></p>
+
+          <div class="panel-actions">
+            <button id="restartBtn" class="action-btn">Play Again</button>
+            <a
+              id="homeBtn"
+              href="https://mdti-internlog.github.io/macrologic/intern.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="action-btn action-link"
+            >
+              Back To Home
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="controls">Controls: Spacebar / Mouse Click / Tap</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
